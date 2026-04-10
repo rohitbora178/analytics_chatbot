@@ -1,0 +1,109 @@
+.chatbot-page {
+  min-height: calc(100vh - 70px);
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 40px 20px;
+}
+
+.chatbot-page-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.chatbot-page-header {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.chatbot-page-header h1 {
+  font-size: 2.5rem;
+  margin: 0 0 10px 0;
+  color: #667eea;
+  font-weight: 700;
+}
+
+.chatbot-page-header p {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0;
+}
+
+.chatbot-page-info {
+  background: white;
+  padding: 30px;
+  margin-top: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.chatbot-page-info h3 {
+  color: #667eea;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.chatbot-page-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.chatbot-page-info li {
+  padding: 10px 0;
+  color: #555;
+  font-size: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.chatbot-page-info li:last-child {
+  border-bottom: none;
+}
+
+.example-questions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.example-card {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  transition: all 0.3s ease;
+}
+
+.example-card:hover {
+  background: #f0f2ff;
+  transform: translateX(5px);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.15);
+}
+
+.example-card code {
+  font-family: "Monaco", "Courier New", monospace;
+  color: #d63384;
+  font-size: 0.9rem;
+  background: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .chatbot-page-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .chatbot-page-header p {
+    font-size: 1rem;
+  }
+
+  .chatbot-page-info {
+    padding: 20px;
+  }
+
+  .example-questions {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,156 @@
+.chatbot-container {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  max-width: 600px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.chatbot-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #667eea;
+}
+
+.chatbot-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.chatbot-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  background: #f9f9f9;
+}
+
+.message {
+  display: flex;
+  margin-bottom: 15px;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+.message.user {
+  justify-content: flex-end;
+}
+
+.message.bot {
+  justify-content: flex-start;
+}
+
+.message-bubble {
+  max-width: 70%;
+  padding: 10px 15px;
+  border-radius: 12px;
+  word-wrap: break-word;
+}
+
+.message.user .message-bubble {
+  background: #667eea;
+  color: white;
+  border-bottom-right-radius: 2px;
+}
+
+.message.bot .message-bubble {
+  background: #e9ecef;
+  color: #333;
+  border-bottom-left-radius: 2px;
+}
+
+.message-time {
+  display: block;
+  font-size: 0.75rem;
+  margin-top: 5px;
+  opacity: 0.7;
+}
+
+.message.user .message-time {
+  color: white;
+}
+
+.message.bot .message-time {
+  color: #666;
+}
+
+.typing {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.chatbot-input-form {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  background: white;
+  border-top: 1px solid #ddd;
+}
+
+.chatbot-input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.chatbot-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+}
+
+.chatbot-input:disabled {
+  background: #f0f0f0;
+  cursor: not-allowed;
+}
+
+.chatbot-send-btn {
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.chatbot-send-btn:hover {
+  background: #764ba2;
+}
+
+.chatbot-send-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .chatbot-container {
+    max-width: 100%;
+    height: 500px;
+    border-radius: 0;
+  }
+
+  .message-bubble {
+    max-width: 85%;
+  }
+}
